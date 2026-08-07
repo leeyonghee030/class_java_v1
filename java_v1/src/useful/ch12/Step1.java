@@ -1,0 +1,27 @@
+package useful.ch12;
+
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.format.TextStyle;
+import java.util.Locale;
+
+public class Step1 {
+
+    public static void main(String[] args) {
+        //지금 이 순간에 날짜 시간 가져오기
+        LocalDate today = LocalDate.now(); //날짜만
+        LocalDateTime now = LocalDateTime.now();// 날짜+시각
+
+        System.out.println("오늘날짜 : " + today);
+        System.out.println("현재 시각 : " + now);
+
+        System.out.println("__________________");
+        //원하는 날짜를 직접 설정할 수있다
+        LocalDate birthday = LocalDate.of(1999,7,24);
+        System.out.println("설정한 날짜 : " + birthday);
+        System.out.println("생일 요일  : " + birthday.getDayOfWeek());
+
+        //만약 한글로 표현하고 싶다면
+        System.out.println(birthday.getDayOfWeek().getDisplayName(TextStyle.FULL, Locale.KOREAN));
+    }
+}
