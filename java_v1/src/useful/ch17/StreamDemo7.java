@@ -1,0 +1,25 @@
+package useful.ch17;
+
+import jdk.swing.interop.SwingInterOpUtils;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+
+public class StreamDemo7 {
+        // reduce 최종연산
+    public static void main(String[] args) {
+
+        List<Integer> numbers = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+
+        int sum = numbers.stream()
+                //매개변수: 초기값, 매개변수 : 두 값을 합치는 방법
+                .reduce(0, (a,b) -> a + b );
+        System.out.println(sum);
+
+        int sum1 = numbers.stream()
+                .reduce(1, (a,b) -> a * b );
+
+        System.out.println(sum1);
+    }
+}
