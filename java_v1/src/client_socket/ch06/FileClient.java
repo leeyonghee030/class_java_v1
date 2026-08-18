@@ -12,7 +12,7 @@ import java.util.Scanner;
  */
 public class FileClient {
 
-    private static String HOST = "192.168.7.51";
+    private static String HOST = "192.168.7.232";
     private static int POST = 5000;
 
     public static void main(String[] args) {
