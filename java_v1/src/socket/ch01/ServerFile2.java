@@ -30,7 +30,6 @@ public class ServerFile2 {
 
             //서버가 클라이언트에게 파일 내용을 읽고 보낸다
             int data;
-            int count = 0;
             while ((data = bis.read()) != -1) {
                 writer.print((char)data);
             }
