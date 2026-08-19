@@ -13,7 +13,7 @@ public class DeleteHttpClient {
 
         //URL에 들어갈 주소 만들기
         String baseURL = "https://jsonplaceholder.typicode.com";
-        String urlString = baseURL + "/todos/1";
+        String urlString = baseURL + "/posts/1";
 
         HttpURLConnection connection = null;
         //URL만들기
