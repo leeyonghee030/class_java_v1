@@ -70,6 +70,7 @@ public class SimpleHttpServer {
         server.createContext("/health", new HealthHandler());
         // 저급 경로 예시 http://localhost:8080/api/users
         server.createContext("/api/users", new userApiHandler());
+        server.createContext("/api/time", new TimeApiHandler());
 
 //        3. 요청을 처리할 스레드 풀 지정 (HTTP 서버는 멀티 스레드 프로그램이라서 미리 생성할 스레드 지정)
         //매번 스레드를 생성하면 요청과 응답이 느려져서 미리 생성
